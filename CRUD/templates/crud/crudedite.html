@@ -1,0 +1,29 @@
+{% extends 'crud/base.html' %}
+
+
+{% block body %}
+<div class="container">
+
+        
+            <h2 class="text-center alert alert-success">Add User - CRUD</h2>
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+    
+                <input class="form-control mb-3" type="text" name="urname" value = "{{urname}}" id="urname"placeholder="Name">
+                </div>
+                <input class="form-control mb-3" type="text" name="urage" value = "{{urage}}" id="urage"placeholder="Age">
+                <input class="form-control mb-3" type="email" name="uremail" value = "{{uremail}}" id="uremail"placeholder="Email">
+                <input class="form-control mb-3" type="text" name="urpassword"  value = "{{urpassword}}" id="urpassword"placeholder="Password">
+                <button type="submit" class="btn btn-warning">update</button>
+                
+
+            </form>
+
+
+
+
+        
+        </div>
+
+{% endblock body %}
